@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partnership Program</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Partnership Form Page -->
+    <div id="partnershipForm" class="page active">
+        <div class="container">
+            <div class="form-card">
+                <div class="header">
+                    <h1>Join Partnership Program</h1>
+                    <p>Become our valued partner today</p>
+                </div>
+                
+                <form id="partnerForm">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="communityName">Community Name</label>
+                        <input type="text" id="communityName" name="communityName" required>
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="sponsorName">Sponsor Name</label>
+                        <input type="text" id="sponsorName" name="sponsorName" required>
+                    </div>
+                    
+                    <button type="submit" class="next-btn">Next</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Investment Page -->
+    <div id="investmentPage" class="page">
+        <div class="container">
+            <div class="form-card">
+                <div class="header">
+                    <h1>Investment Required</h1>
+                    <p class="investment-text">You need to invest 15% approximately ৳15,000</p>
+                </div>
+                
+                <form id="investForm">
+                    <div class="input-group">
+                        <label for="promoCode">Promo Code</label>
+                        <input type="text" id="promoCode" name="promoCode" placeholder="Enter promo code">
+                        <button type="button" id="applyPromo" class="apply-btn">Apply</button>
+                    </div>
+                    
+                    <div class="amount-display">
+                        <h3>Investment Amount: ৳<span id="investmentAmount">15000</span></h3>
+                    </div>
+                    
+                    <div class="payment-info">
+                        <div class="input-group">
+                            <label>Payment Number</label>
+                            <div class="copy-field">
+                                <input type="text" id="paymentNumber" value="9856000816591644" readonly>
+                                <button type="button" id="copyNumber" class="copy-btn">Copy</button>
+                            </div>
+                        </div>
+                        
+                        <div class="input-group">
+                            <label for="transactionId">Transaction ID</label>
+                            <input type="text" id="transactionId" name="transactionId" required>
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Verification Page -->
+    <div id="verificationPage" class="page">
+        <div class="container">
+            <div class="form-card text-center">
+                <div class="loader">
+                    <div class="spinner"></div>
+                </div>
+                <h2>Verifying Payment...</h2>
+                <p>Please wait 3 minutes for verification</p>
+                <div class="countdown" id="countdown">3:00</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Success Page -->
+    <div id="successPage" class="page">
+        <div class="container">
+            <div class="form-card text-center">
+                <div class="success-icon">✓</div>
+                <h1>Congratulations!</h1>
+                <h2>Payment Approved</h2>
+                <p>You have successfully joined our Partnership Program</p>
+                <p class="welcome-text">Welcome to our community!</p>
+                <button class="home-btn" onclick="location.reload()">Back to Home</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
